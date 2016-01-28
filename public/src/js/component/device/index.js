@@ -2,7 +2,7 @@
  * Created by 28652 on 2016/1/27.
  */
 
-import React from 'react';
+import List from './list';
 
 class Device extends React.Component {
     render() {

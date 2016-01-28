@@ -1,9 +1,14 @@
 
-//var path = require('path');
-import path from 'path';
-import webpack from 'webpack';
+var path = require('path');
+var webpack = require('webpack');
+//import path from 'path';
+//import webpack from 'webpack';
 
 //var miniPlugin = new webpack.optimize.MinChunkSizePlugin(minSize);
+var providePlugin = new webpack.ProvidePlugin({
+    React: 'react',
+    ReactDOM: 'react-dom'
+});
 var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
 var definePlugin = new webpack.DefinePlugin({
     "process.env": {
@@ -38,5 +43,5 @@ module.exports = {
         // you can now require('file') instead of require('file.coffee')
         extensions: ['', '.js', '.json', '.coffee']
     },
-    plugins: [definePlugin, commonsPlugin]
+    plugins: [definePlugin, commonsPlugin, providePlugin]
 };

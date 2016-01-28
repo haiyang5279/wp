@@ -1,9 +1,9 @@
-webpackJsonp([1],{
+webpackJsonp([1,3],{
 
-/***/ 215:
-/***/ function(module, exports) {
+/***/ 211:
+/***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -32,8 +32,8 @@ webpackJsonp([1],{
 	            return React.createElement(
 	                "div",
 	                null,
-	                "Device",
-	                this.props.children
+	                "Device.detail: ",
+	                this.props.params.id
 	            );
 	        }
 	    }]);
@@ -41,9 +41,8 @@ webpackJsonp([1],{
 	    return Device;
 	}(React.Component);
 
-	;
-
 	module.exports = Device;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(142)))
 
 /***/ }
 

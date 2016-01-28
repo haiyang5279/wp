@@ -2,7 +2,6 @@
  * Created by 28652 on 2016/1/26.
  */
 
-import React from 'react';
 import {IndexLink, Link } from 'react-router';
 
 class Side extends React.Component {
