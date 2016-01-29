@@ -18,6 +18,10 @@ var config = require('./config.json');
 
 var app = express();
 
+var debug = process.env.NODE_ENV !== 'production';
+// 开发环境和生产环境对应不同的目录
+var viewDir = debug ? 'src' : 'build';
+
 // view engine setup
 app.set('views', path.join(__dirname, 'public/page'));
 app.set('view engine', 'ejs');

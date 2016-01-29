@@ -4,6 +4,7 @@
 
 import {Link} from 'react-router';
 import '../../../css/u.table.less';
+import '../../../css/u.ico.less';
 
 class Entry extends React.Component {
     render() {
@@ -11,7 +12,7 @@ class Entry extends React.Component {
             <tr>
                 <td>11111</td>
                 <td>{this.props.d.id}</td>
-                <td><Link to={"/device/" + this.props.d.id} >detail</Link></td>
+                <td><Link to={"/device/" + this.props.d.id} ><ico className="ico ico-edit" />detail</Link></td>
             </tr>
         )
     }

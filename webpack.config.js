@@ -36,7 +36,8 @@ module.exports = {
                 }
             },
             { test: /\.less$/, loader: 'style!css!less' },
-            { test: /\.css$/, loader: 'style!css' }
+            { test: /\.css$/, loader: 'style!css' },
+            { test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=10240&name=[path][name].[ext]'}
         ]
     },
     resolve: {
