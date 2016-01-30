@@ -6,7 +6,7 @@ var path = require('path');
 module.exports = function(app){
     app.get('*', function (req, res, next){
         //res.sendFile(path.resolve(__dirname, 'public/page', 'index.ejs'))
-        //test by allen
+        //test by allen and two 
         res.render('index');
     });
 };
