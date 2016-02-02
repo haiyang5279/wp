@@ -33,14 +33,12 @@ module.exports = {
         loaders: [
             {
                 test: /\.js$/,
-                loader: 'babel',
-                query: {
-                    presets: ['es2015', 'react']
-                }
+                loader: 'babel?presets[]=es2015&presets[]=react'
             },
             { test: /\.less$/, loader: 'style!css!less' },
             { test: /\.css$/, loader: 'style!css' },
-            { test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=10240&name=[path][name].[ext]'}
+            { test: /\.(gif|jpg|png)\??.*$/, loader: 'url-loader?limit=10240&name=img/[name].[hash].[ext]'},
+            { test: /\.(woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=10240&name=font/[hash:8].[ext]'}
         ]//,
         //noParse: [pathToReact]
     },
